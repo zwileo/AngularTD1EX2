@@ -353,7 +353,7 @@
 
 <router-outlet></router-outlet>
 
-<img src="{{nomImage}}" alt="image" width="300px">
+<img src="{{nomImage}}" alt="image" width="200px">
 
 <p ngClass="texteRouge">Ceci est une application</p>
 <br><br>
@@ -383,4 +383,14 @@
   </tr>
 
 </table>
+ <br> <br>
+
+<form> Entrez votre message
+  <input [(ngModel)]="message" type="text" name="message">
+  <button (click)="ajouterUser()">Add</button>
+</form>
+
+<p>{{message}}</p>
+
+
     

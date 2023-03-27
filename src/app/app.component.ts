@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -52,4 +53,17 @@ export class AppComponent {
       this.detailBouton = !this.detailBouton
   }
 
+
+  message: string = "";
+
+  //definir valeur par defaut pour ajouter utilisateur
+  oUtil: {nom:string, prenom: string, email: string, tel: string, age:number;} = 
+  {"nom":"test", "prenom":"test", "email":"test", "tel":"test", "age":24}
+
+  ajouterUser():void
+  {
+    this.oUtil.nom = this.message;
+    this.utilisateur.push(this.oUtil);
+  }
+ 
 }
