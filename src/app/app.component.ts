@@ -28,4 +28,28 @@ export class AppComponent {
 
   bouton:boolean=true;
 
+  utilisateur:any[] = [
+    {"nom":"Dupont", "prenom":"Jean","email":"info.ezf@email.com","tel":"06954582545","age":25},
+    {"nom":"Javier", "prenom":"Justine","email":"izeziopàmezf@email.com","tel":"061512545","age":28},
+    {"nom":"Durant", "prenom":"Paul","email":"infxaszf@email.com","tel":"06145582545","age":22},
+    {"nom":"Delpra", "prenom":"Joris","email":"infozrgf@email.com","tel":"06154586549","age":30},
+
+  ]
+
+  detailBouton:boolean = true;
+
+  cacherDetails():void
+  {
+      // if(this.detailBouton)
+      // {
+      //   this.detailBouton = false;
+      // }
+      // else
+      // {
+      //     this.detailBouton = true;
+      // }
+
+      this.detailBouton = !this.detailBouton
+  }
+
 }

@@ -361,13 +361,26 @@
 <br><br>
 <button (click)="onClick()">Cliquez ici pour voir le message</button>
 
-<table>
-  <th>Nom</th>
-  <th>Prenom</th>
-  <th>email</th>
-  <th>telephone</th>
-  <th>age</th>
 
-  
+<button (click)="cacherDetails()" *ngIf="detailBouton, else faux">Cacher détails</button>
+<ng-template #faux> <button (click)="cacherDetails()">Montrer détails</button></ng-template>
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Email</th>
+    <th>Telephone</th>
+    <th>Age</th>
+  </tr>
+
+  <tr *ngFor="let u of utilisateur">
+     <td *ngIf = "detailBouton">{{u.nom}}</td>
+     <td *ngIf = "detailBouton">{{u.prenom}}</td>
+     <td *ngIf = "detailBouton">{{u.email}}</td>
+     <td *ngIf = "detailBouton">{{u.tel}}</td>
+     <td *ngIf = "detailBouton">{{u.age}}</td>
+
+  </tr>
+
 </table>
     
